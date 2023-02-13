@@ -16,6 +16,6 @@ phases:
     commands:
       - echo Configuring NGINX Server
     
-  artifacts:
-    files:
-      - /var/www/html/index.html
+artifacts:
+  files:
+    - /var/www/html/index.html
