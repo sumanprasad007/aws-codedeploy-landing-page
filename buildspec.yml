@@ -1,0 +1,21 @@
+version 0.2 # it's your buildspec version
+
+phases:
+  install:
+    commands:
+      - echo Installing NGINX Server
+      - sudo apt-get update
+      - sudo apt-get install nginx -y
+  
+  build:
+    commands:
+      - echo Build Phase started on 'date'
+      - cp index.html /var/www/html/
+
+  post-build:
+    commands:
+      - echo Configuring NGINX Server
+    
+  aritfacts:
+    files:
+      - /var/www/html/index.html
