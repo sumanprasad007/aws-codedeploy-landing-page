@@ -2,11 +2,11 @@ version: 0.0
 
 os: linux
 files:
-  - source: /index.html
+  - source: /
   - destination: /var/www/html/
 
 hooks:
-  AfterInstall:
+  BeforeInstall:
     - location: scripts/install_nginx.sh
       timeout: 300
       runtime: root
